@@ -3,10 +3,10 @@ import useFetch from "./useFetch";
 
 const BlogDetails = () => {
   const { id } = useParams();
-  const { data: blog, error, isPending } = useFetch('https://jsonblog.onrender.com/blogs' + id);
+  const { data: blog, error, isPending } = useFetch('https://jsonblog.onrender.com/blogs/' + id);
   const navigate = useNavigate();
   const handleClick = () => {
-    fetch('https://jsonblog.onrender.com/blogs' + blog.id, {
+    fetch('https://jsonblog.onrender.com/blogs/' + blog.id, {
       method: 'DELETE'
     }).then(() => {
       navigate('/');
