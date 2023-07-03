@@ -2,7 +2,7 @@ import BlogList from "./BlogList";
 import useFetch from "./useFetch";
 
 const Home = () => {
-  const { error, isPending, data: blogs } = useFetch('https://jsonblog.onrender.com/')
+  const { error, isPending, data: blogs } = useFetch('https://jsonblog.onrender.com/blogs')
 
   return (
     <div className="home">
